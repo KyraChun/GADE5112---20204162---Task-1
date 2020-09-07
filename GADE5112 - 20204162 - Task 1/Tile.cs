@@ -8,5 +8,21 @@ namespace GADE5112___20204162___Task_1
 {
     abstract class Tile
     {
+        protected Tile()
+        {
+        }
+
+        protected X;
+        protected Y;
+        public enum TileType
+        {
+            HeroTile,
+            EnemyTile,
+            GoldTile,
+            WeaponTile,
+
+        }
+
+
     }
 }
