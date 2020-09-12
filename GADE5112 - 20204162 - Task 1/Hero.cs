@@ -8,5 +8,9 @@ namespace GADE5112___20204162___Task_1
 {
     class Hero : Character
     {
+        public Hero()
+        {
+            
+        }
     }
 }

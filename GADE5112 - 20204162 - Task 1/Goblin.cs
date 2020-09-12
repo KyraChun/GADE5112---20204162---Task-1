@@ -8,5 +8,13 @@ namespace GADE5112___20204162___Task_1
 {
     class Goblin : Enemy
     {
+        public Goblin(int enemyHP, int enemyDamage) : base (enemyHP, enemyDamage)
+        {
+            enemyHP = 10;
+            enemyDamage = 1;
+        }
+
+        //public override string ReturnMove()
+
     }
 }

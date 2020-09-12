@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GADE5112___20204162___Task_1
 {
-    class EmptyTile
+    class Map
     {
     }
 }

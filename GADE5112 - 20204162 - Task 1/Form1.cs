@@ -16,5 +16,10 @@ namespace GADE5112___20204162___Task_1
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
