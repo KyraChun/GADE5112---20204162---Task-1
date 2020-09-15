@@ -9,21 +9,27 @@ namespace GADE5112___20204162___Task_1
 {
     abstract class Enemy : Character
     {
+        //Qu 2.4 : The abstract Enemy class which inherits from Character.
+
         protected Random random = new Random();
 
-        public Enemy(int EnemyHP, int EnemyDamage)
+        public Enemy(int enemyHP, int enemyDamage, int positionX, int positionY, string enemyClassName, char symbol = 'E') : base(positionX, positionY, symbol)
         {
-            int enemyHP = EnemyHP;
-            int enemyDamage = EnemyDamage;
-            string enemySymbol;
-            int positionX;
-            int positionY;
+            //Enemy constructor that receives X and Y positions, an enemy’s damage and it is starting HP(and thus also max HP) and its symbol.
+            //It delegates its X and Y position to the Character subclass via a constructor initialiser.
+            //It then sets all the relevant member variables.
+
+            characterHP = enemyHP;
+            characterDamage = enemyDamage;
+            characterMaxHP = characterHP;
         }
 
         public override string ToString()
         {
-            return "Person: " + Name + " " + Age;
-            //EnemyClassName at [X, Y] (Amount DMG)
+            //An overridden ToString method that, using the enemy’s class, outputs a string that looks as follows:  
+            //     EnemyClassName at[X, Y] (Amount DMG)
+
+            return $"Enemy Class:  { this.GetType().FullName }  at [  { X } , { Y } ] (  { characterDamage } )";
         }
     }
 }

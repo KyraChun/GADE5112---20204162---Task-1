@@ -29,58 +29,113 @@
         private void InitializeComponent()
         {
             this.map_LB = new System.Windows.Forms.Label();
-            this.heroHP_LB = new System.Windows.Forms.Label();
+            this.heroStats_LB = new System.Windows.Forms.Label();
             this.heroName_TB = new System.Windows.Forms.TextBox();
             this.heroName_LB = new System.Windows.Forms.Label();
+            this.heroAttack_ListBox = new System.Windows.Forms.ListBox();
+            this.enemyStats_LB = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.attack_BTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // map_LB
             // 
             this.map_LB.AutoSize = true;
-            this.map_LB.Location = new System.Drawing.Point(108, 152);
+            this.map_LB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.map_LB.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.map_LB.Location = new System.Drawing.Point(135, 186);
+            this.map_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.map_LB.Name = "map_LB";
-            this.map_LB.Size = new System.Drawing.Size(35, 13);
+            this.map_LB.Size = new System.Drawing.Size(84, 24);
             this.map_LB.TabIndex = 0;
             this.map_LB.Text = "label1";
-            this.map_LB.Click += new System.EventHandler(this.label1_Click);
             // 
-            // heroHP_LB
+            // heroStats_LB
             // 
-            this.heroHP_LB.AutoSize = true;
-            this.heroHP_LB.Location = new System.Drawing.Point(283, 130);
-            this.heroHP_LB.Name = "heroHP_LB";
-            this.heroHP_LB.Size = new System.Drawing.Size(15, 13);
-            this.heroHP_LB.TabIndex = 1;
-            this.heroHP_LB.Text = "lb";
+            this.heroStats_LB.AutoSize = true;
+            this.heroStats_LB.Location = new System.Drawing.Point(373, 138);
+            this.heroStats_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.heroStats_LB.Name = "heroStats_LB";
+            this.heroStats_LB.Size = new System.Drawing.Size(19, 17);
+            this.heroStats_LB.TabIndex = 1;
+            this.heroStats_LB.Text = "lb";
             // 
             // heroName_TB
             // 
-            this.heroName_TB.Location = new System.Drawing.Point(22, 22);
+            this.heroName_TB.Location = new System.Drawing.Point(182, 40);
+            this.heroName_TB.Margin = new System.Windows.Forms.Padding(4);
             this.heroName_TB.Name = "heroName_TB";
-            this.heroName_TB.Size = new System.Drawing.Size(94, 20);
+            this.heroName_TB.Size = new System.Drawing.Size(186, 22);
             this.heroName_TB.TabIndex = 2;
             // 
             // heroName_LB
             // 
             this.heroName_LB.AutoSize = true;
-            this.heroName_LB.Location = new System.Drawing.Point(283, 105);
+            this.heroName_LB.Location = new System.Drawing.Point(372, 106);
+            this.heroName_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heroName_LB.Name = "heroName_LB";
-            this.heroName_LB.Size = new System.Drawing.Size(35, 13);
+            this.heroName_LB.Size = new System.Drawing.Size(46, 17);
             this.heroName_LB.TabIndex = 3;
             this.heroName_LB.Text = "label1";
+            this.heroName_LB.Click += new System.EventHandler(this.heroName_LB_Click);
+            // 
+            // heroAttack_ListBox
+            // 
+            this.heroAttack_ListBox.FormattingEnabled = true;
+            this.heroAttack_ListBox.ItemHeight = 16;
+            this.heroAttack_ListBox.Location = new System.Drawing.Point(375, 173);
+            this.heroAttack_ListBox.Name = "heroAttack_ListBox";
+            this.heroAttack_ListBox.Size = new System.Drawing.Size(134, 100);
+            this.heroAttack_ListBox.TabIndex = 4;
+            this.heroAttack_ListBox.SelectedIndexChanged += new System.EventHandler(this.heroAttack_ListBox_SelectedIndexChanged);
+            // 
+            // enemyStats_LB
+            // 
+            this.enemyStats_LB.AutoSize = true;
+            this.enemyStats_LB.Location = new System.Drawing.Point(373, 349);
+            this.enemyStats_LB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.enemyStats_LB.Name = "enemyStats_LB";
+            this.enemyStats_LB.Size = new System.Drawing.Size(19, 17);
+            this.enemyStats_LB.TabIndex = 5;
+            this.enemyStats_LB.Text = "lb";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Papyrus", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(156, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 27);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Type in your Hero\'s Name";
+            // 
+            // attack_BTN
+            // 
+            this.attack_BTN.Location = new System.Drawing.Point(376, 289);
+            this.attack_BTN.Name = "attack_BTN";
+            this.attack_BTN.Size = new System.Drawing.Size(133, 28);
+            this.attack_BTN.TabIndex = 7;
+            this.attack_BTN.Text = "Attack";
+            this.attack_BTN.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 340);
+            this.BackColor = System.Drawing.Color.BurlyWood;
+            this.ClientSize = new System.Drawing.Size(532, 418);
+            this.Controls.Add(this.attack_BTN);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.enemyStats_LB);
+            this.Controls.Add(this.heroAttack_ListBox);
             this.Controls.Add(this.heroName_LB);
             this.Controls.Add(this.heroName_TB);
-            this.Controls.Add(this.heroHP_LB);
+            this.Controls.Add(this.heroStats_LB);
             this.Controls.Add(this.map_LB);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Rogue Name";
+            this.Text = "Rogue Game";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,9 +144,13 @@
         #endregion
 
         private System.Windows.Forms.Label map_LB;
-        private System.Windows.Forms.Label heroHP_LB;
+        private System.Windows.Forms.Label heroStats_LB;
         private System.Windows.Forms.TextBox heroName_TB;
         private System.Windows.Forms.Label heroName_LB;
+        private System.Windows.Forms.ListBox heroAttack_ListBox;
+        private System.Windows.Forms.Label enemyStats_LB;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button attack_BTN;
     }
 }
 

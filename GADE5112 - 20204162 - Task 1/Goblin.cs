@@ -8,13 +8,15 @@ namespace GADE5112___20204162___Task_1
 {
     class Goblin : Enemy
     {
-        public Goblin(int enemyHP, int enemyDamage) : base (enemyHP, enemyDamage)
+        //Qu 2.5 : Concrete Goblin class which inherits from Enemy.
+        public Goblin(int positionY, int positionX, int enemyHP = 10, int enemyDamage = 1) : base (enemyHP, enemyDamage, positionY, positionX,"Goblin", 'G')
         {
-            enemyHP = 10;
-            enemyDamage = 1;
+
         }
 
-        //public override string ReturnMove()
-
+        public override Movement ReturnMove(Movement move = Movement.NoMovement)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

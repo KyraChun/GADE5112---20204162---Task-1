@@ -17,7 +17,12 @@ namespace GADE5112___20204162___Task_1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void heroName_LB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void heroAttack_ListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

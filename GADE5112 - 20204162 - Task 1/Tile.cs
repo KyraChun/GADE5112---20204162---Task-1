@@ -8,46 +8,80 @@ namespace GADE5112___20204162___Task_1
 {
     abstract class Tile
     {
-        protected string positionX
-        { get; set; }
+        //Qu 2.1 : This is my abstract Tile class that will contain all in-game object postions.
+        protected int X
+        {
+            get
+            {
+                return X;
+            }
+            set
+            {
 
-        protected string positionY
-        { get; set; }
+            }
+        }
+
+
+        protected int Y
+        {
+            get
+            {
+                return Y;
+            }
+            set
+            {
+
+            }
+        }
+
 
         public enum TileType
         {
-            HeroTile,
-            EnemyTile,
-            GoldTile,
-            WeaponTile,
+            //This enum will be used by other classes to determine what kind of tiles to create on the map.
+
+            Hero,
+            Enemy,
+            Gold,
+            Weapon,
         }
 
         public Tile()
         {
-            TileType HeroTile = H;
-            TileType EnemyTile = G;
-            TileType GoldTile;
-            TileType WeaponTile;
+            //Constructor that receives and sets initial values for relevant variables.
+
+            X = 0;
+            Y = 0;
+            char hero = 'H';
+            char enemy = 'E';
+            char gold = 'G';
+            char weapon = 'W';
+            hero = (char)TileType.Hero;
+            enemy = (char)TileType.Enemy;
+            gold = (char)TileType.Gold;
+            weapon = (char)TileType.Weapon;
         }
     }
 
     class Obstacle : Tile
     {
-        public Obstacle(Tile)
-        {
-            positionY;
-            positionX;
+        //Obstacle subclass contains nothing extra, and its constructor simply calls the base class’s constructor with X and Y parameters.
+        //The obstacle class only exists currently to border our map with Obstacle tiles that the character can't move past.
 
+        public Obstacle(int positionX, int positionY) : base()
+        {
+            base.Y = positionY;
+            base.X = positionX;
         }
     }
 
     class EmptyTile : Tile
     {
-        public EmptyTile(Tile)
-        {
-            positionY;
-            positionX;
+        //EmptyTile is identical to Obstacle, however it merely exists to denote an empty tile.
 
+        public EmptyTile(int positionX, int positionY) : base()
+        {
+            base.Y = positionY;
+            base.X = positionX;
         }
     }
 }
